@@ -1,0 +1,11 @@
+
+
+   {% if is_granted('ROLE_PATION') %}
+        {{ render(controller("SmartPsyBundle:Default:accueilPation")) }}
+    {% elseif is_granted('ROLE_PSY') %}
+        {{ render(controller("SmartPsyBundle:Default:accueilPsy")) }}
+    {% elseif is_granted('ROLE_ADMIN') %}
+        {{ render(controller("SmartPsyBundle:Back:index")) }}
+    {% else %}
+        {{ render(controller("SmartPsyBundle:Default:accueil")) }}
+    {% endif %}

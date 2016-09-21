@@ -1,0 +1,30 @@
+test:
+    path:     /
+    defaults: { _controller: "SmartPsyBundle:Test:index" }
+
+test_show:
+    path:     /{id}/show
+    defaults: { _controller: "SmartPsyBundle:Test:show" }
+
+test_new:
+    path:     /new
+    defaults: { _controller: "SmartPsyBundle:Test:new" }
+
+test_create:
+    path:     /create
+    defaults: { _controller: "SmartPsyBundle:Test:create" }
+    methods:  POST
+
+test_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SmartPsyBundle:Test:edit" }
+
+test_update:
+    path:     /{id}/update
+    defaults: { _controller: "SmartPsyBundle:Test:update" }
+    methods:  [POST, PUT]
+
+test_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SmartPsyBundle:Test:delete" }
+    methods:  [POST, DELETE]

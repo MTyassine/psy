@@ -1,0 +1,30 @@
+testaffecter:
+    path:     /
+    defaults: { _controller: "SmartPsyBundle:TestAffecter:index" }
+
+testaffecter_show:
+    path:     /{id}/show
+    defaults: { _controller: "SmartPsyBundle:TestAffecter:show" }
+
+testaffecter_new:
+    path:     /new
+    defaults: { _controller: "SmartPsyBundle:TestAffecter:new" }
+
+testaffecter_create:
+    path:     /create
+    defaults: { _controller: "SmartPsyBundle:TestAffecter:create" }
+    methods:  POST
+
+testaffecter_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SmartPsyBundle:TestAffecter:edit" }
+
+testaffecter_update:
+    path:     /{id}/update
+    defaults: { _controller: "SmartPsyBundle:TestAffecter:update" }
+    methods:  [POST, PUT]
+
+testaffecter_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SmartPsyBundle:TestAffecter:delete" }
+    methods:  [POST, DELETE]

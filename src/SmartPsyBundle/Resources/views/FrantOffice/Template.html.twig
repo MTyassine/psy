@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    {% include 'SmartPsyBundle:FrantOffice:menu.html.twig' %}
+
+
+    <section id="services" class="section section-padded">
+        <div class="container">
+            <div class="row text-center title">
+                <h2>{% block titre %}{% endblock %}</h2>
+                <h4 class="light muted">{% block slogant %}{% endblock %}</h4>
+            </div>
+            <div class="row services">
+                {% block contenu %}{% endblock %}
+            </div>
+        </div>
+        <div class="cut cut-bottom"></div>
+    </section>
+
+
+
+
+
+{% endblock %}

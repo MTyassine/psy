@@ -1,0 +1,78 @@
+{% extends 'SmartPsyBundle:FrantOffice:Template.html.twig' %}
+
+
+    {% block titre %}Test{% endblock %}
+
+{% block contenu -%}
+
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ entity.nom }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ entity.description }}</td>
+            </tr>
+            <tr>
+                <th>Datecreation</th>
+                <td>{{ entity.dateCreation }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h3>Question</h3>
+
+    <table class="records_list">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Question</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entit in entities %}
+            <tr>
+                <td><a href="{{ path('question_show', { 'id': entit.id }) }}">{{ entit.id }}</a></td>
+                <td>{{ entity.question }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('question_show', { 'id': entit.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('question_edit', { 'id': entit.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('test') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('test_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

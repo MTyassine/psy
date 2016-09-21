@@ -1,0 +1,43 @@
+{% extends 'SmartPsyBundle:FrantOffice:Template.html.twig' %}
+
+
+    {% block titre %}TestAffecter{% endblock %}
+
+{% block contenu -%}
+
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Dateaffect</th>
+                <td>{{ entity.dateAffect }}</td>
+            </tr>
+            <tr>
+                <th>Passage</th>
+                <td>{{ entity.passage }}</td>
+            </tr>
+            <tr>
+                <th>Datepassage</th>
+                <td>{{ entity.datePassage }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('testaffecter') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('testaffecter_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

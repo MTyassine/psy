@@ -1,0 +1,50 @@
+smart_psy_testaffecter:
+    resource: "@SmartPsyBundle/Resources/config/routing/testaffecter.yml"
+    prefix:   /testaffecter
+
+smart_psy_reponses:
+    resource: "@SmartPsyBundle/Resources/config/routing/reponses.yml"
+    prefix:   /reponses
+
+smart_psy_question:
+    resource: "@SmartPsyBundle/Resources/config/routing/question.yml"
+    prefix:   /question
+
+smart_psy_test:
+    resource: "@SmartPsyBundle/Resources/config/routing/test.yml"
+    prefix:   /test
+
+smart_psy_homepage:
+    path:     /
+    defaults: { _controller: SmartPsyBundle:Default:index }
+
+smart_psy_homepage:
+    path:     /accueil
+    defaults: { _controller: SmartPsyBundle:Default:accueil }
+
+#Frant-End#
+
+#Pation
+smart_psy_homePation:
+    path:     /pation
+    defaults: { _controller: SmartPsyBundle:Default:accueilPation }
+
+#Psy
+smart_psy_homePsy:
+    path:     /psy
+    defaults: { _controller: SmartPsyBundle:Default:accueilPsy }
+
+smart_psy_hometest:
+    path:     /psy/test
+    defaults: { _controller: SmartPsyBundle:Default:Test }
+
+smart_psy_listPatient:
+    path:     /psy/patient
+    defaults: { _controller: SmartPsyBundle:Default:Show }
+
+
+#Back-End#
+
+smart_psy_homeBack:
+    path:     /admin
+    defaults: { _controller: SmartPsyBundle:Back:index }

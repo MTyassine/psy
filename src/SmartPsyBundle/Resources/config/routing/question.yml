@@ -1,0 +1,30 @@
+question:
+    path:     /
+    defaults: { _controller: "SmartPsyBundle:Question:index" }
+
+question_show:
+    path:     /{id}/show
+    defaults: { _controller: "SmartPsyBundle:Question:show" }
+
+question_new:
+    path:     /new
+    defaults: { _controller: "SmartPsyBundle:Question:new" }
+
+question_create:
+    path:     /create
+    defaults: { _controller: "SmartPsyBundle:Question:create" }
+    methods:  POST
+
+question_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SmartPsyBundle:Question:edit" }
+
+question_update:
+    path:     /{id}/update
+    defaults: { _controller: "SmartPsyBundle:Question:update" }
+    methods:  [POST, PUT]
+
+question_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SmartPsyBundle:Question:delete" }
+    methods:  [POST, DELETE]

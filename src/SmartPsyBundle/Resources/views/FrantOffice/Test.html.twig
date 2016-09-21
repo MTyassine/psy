@@ -1,0 +1,36 @@
+{% extends 'SmartPsyBundle:FrantOffice:Template.html.twig' %}
+
+
+{% block titre %}Test Psychologique{% endblock %}
+
+{% block contenu -%}
+
+    <div class="col-md-4">
+        <div class="service">
+            <div class="icon-holder">
+                <img src="{{ asset('img/icons/heart-blue.png')}}" alt="" class="icon">
+            </div>
+            <h4 class="heading"><a href="">List Patient</a></h4>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="service">
+            <div class="icon-holder">
+                <img src="{{ asset('img/icons/guru-blue.png')}}" alt="" class="icon">
+            </div>
+            <h4 class="heading"><a href="{{ path('test_new') }}">Crée un nouveau test</a></h4>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="service">
+            <div class="icon-holder">
+                <img src="{{ asset('img/icons/weight-blue.png')}}" alt="" class="icon">
+            </div>
+            <h4 class="heading"><a href="{{ path('test') }}">List Test</a></h4>
+            <p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
+        </div>
+    </div>
+
+{% endblock %}

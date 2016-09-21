@@ -1,0 +1,30 @@
+reponses:
+    path:     /
+    defaults: { _controller: "SmartPsyBundle:Reponses:index" }
+
+reponses_show:
+    path:     /{id}/show
+    defaults: { _controller: "SmartPsyBundle:Reponses:show" }
+
+reponses_new:
+    path:     /new
+    defaults: { _controller: "SmartPsyBundle:Reponses:new" }
+
+reponses_create:
+    path:     /create
+    defaults: { _controller: "SmartPsyBundle:Reponses:create" }
+    methods:  POST
+
+reponses_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SmartPsyBundle:Reponses:edit" }
+
+reponses_update:
+    path:     /{id}/update
+    defaults: { _controller: "SmartPsyBundle:Reponses:update" }
+    methods:  [POST, PUT]
+
+reponses_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SmartPsyBundle:Reponses:delete" }
+    methods:  [POST, DELETE]

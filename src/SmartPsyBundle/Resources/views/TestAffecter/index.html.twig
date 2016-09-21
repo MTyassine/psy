@@ -1,0 +1,48 @@
+{% extends 'SmartPsyBundle:FrantOffice:Template.html.twig' %}
+
+
+    {% block titre %}TestAffecter list{% endblock %}
+
+{% block contenu -%}
+
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Dateaffect</th>
+                <th>Passage</th>
+                <th>Datepassage</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('testaffecter_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.dateAffect }}</td>
+                <td>{{ entity.passage }}</td>
+                <td>{{ entity.datePassage }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('testaffecter_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('testaffecter_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('testaffecter_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}
